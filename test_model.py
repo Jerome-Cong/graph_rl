@@ -73,7 +73,9 @@ if __name__ == '__main__':
     # model_name = 'models/rl_421_revisit/ckpt/ckpt_146.pkl'  # ent_coef  = 1e-6
     # model_name = 'models/rl_422/ckpt/ckpt_139.pkl'  # ent_coef  = 1e-6
     # model_name = 'models/imitation_204/ckpt/ckpt_015.pkl'  # ent_coef  = 1e-6
-    model_name = 'models/imitation_multi_5_3/ckpt/ckpt_339.pkl'  # ent_coef  = 1e-6
+    # model_name = 'models/imitation_multi_5_3/ckpt/ckpt_339.pkl'  # ent_coef  = 1e-6
+    # model_name = 'models/rl_multi_421_revisit/ckpt/ckpt_004.pkl'  # ent_coef  = 1e-6
+    model_name = 'models/rl_multi_nl_623_nl/ckpt/ckpt_008.pkl'
 
     # load the dictionary of parameters from file
     model_params, params = BaseRLModel._load_from_file(model_name)
@@ -94,11 +96,11 @@ if __name__ == '__main__':
     new_model.load_parameters(params)
 
     print('Model loaded')
-    print('\nPlay 10 games and return scores...')
-    results = eval_model(env, new_model, 100, render_mode='none')
-    print('reward,          mean = {:.1f}, std = {:.1f}'.format(np.mean(results['reward']), np.std(results['reward'])))
-    print('')
+    # print('\nPlay 10 games and return scores...')
+    # results = eval_model(env, new_model, 100, render_mode='none')
+    # print('reward,          mean = {:.1f}, std = {:.1f}'.format(np.mean(results['reward']), np.std(results['reward'])))
+    # print('')
 
     print('\nPlay games with live visualization...')
     # eval_model(vec_env, new_model, 10, render_mode='human')
-    eval_model(env, new_model, 10, render_mode='human')
+    eval_model(env, new_model, 1, render_mode='human')

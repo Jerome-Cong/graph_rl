@@ -35,7 +35,8 @@ if __name__ == '__main__':
     vec_env = SubprocVecEnv([make_env])
 
     # Specify pre-trained model checkpoint file.
-    model_name = 'models/nl2_1_19_16/ckpt/ckpt_048.pkl'
+    # model_name = 'models/nl2_1_19_16/ckpt/ckpt_048.pkl'
+    model_name = 'models/rl_multi_421_revisit/ckpt/ckpt_004.pkl'
     # model_name = 'models/imitation_test/ckpt/ckpt_036.pkl'
 
     # load the dictionary of parameters from file
